@@ -59,7 +59,7 @@ sendBtn.addEventListener("click", function () {
     const carrozza = Math.floor(Math.random() * 10) + 1;
 
 
-    // NUMERO CARROZZA
+    // NUMERO CODICECP
     const codiceCp = Math.floor(Math.random() * 10000) + 10000;
  
 
@@ -70,7 +70,7 @@ sendBtn.addEventListener("click", function () {
     document.getElementById("carrozza").innerHTML += carrozza;
     document.getElementById("codice-cp").innerHTML += codiceCp;
     document.getElementById("costo-biglietto").innerHTML += ` ${biglietto.toFixed(2)}`;
-    resultSection.classList.remove("ms_d-none");
+    resultSection.classList.remove("d-none");
 })
 
 document.getElementById("clear").addEventListener("click", function () {
@@ -82,5 +82,5 @@ document.getElementById("clear").addEventListener("click", function () {
     document.getElementById("carrozza").innerHTML = "";
     document.getElementById("codice-cp").innerHTML = "";
     document.getElementById("costo-biglietto").innerHTML = "";
-    resultSection.classList.addEventListener("ms_d-none");
+    resultSection.classList.addEventListener("d-none");
 })

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- CASTOM STYLE -->
     <link rel="stylesheet" href="css/style.css">
@@ -11,51 +13,77 @@
 <body>
 
     <!----------------- INPUT ------------------------->
-    <section class="modulo">
+    <section class="modulo cotainer mb-5">
+        <div class="row justify-content-center">
 
-        <!-- NOME -->
-        <div class="input-item">
-            <label for="nome">nome</label>
-            <input type="text" id="nome">
+            <h3 class="mb-5 text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h3>
+
+            <!-- NOME -->
+            <div class="input-item flex-wrap col-3 text-center">
+                <label for="nome" class="w-100 mb-3">Nome Cognome</label>
+                <input type="text" id="nome">
+            </div>
+
+
+            <!-- DISTANZA -->
+            <div class="input-item flex-wrap col-4 text-center">
+                <label for="distanza" class="w-100 mb-3">chilometri da percorrere</label>
+                <input type="text" id="distanza">
+            </div>
+
+
+            <!-- ETà -->
+            <div class="input-item flex-wrap col-3 text-center">
+                <label for="eta" class="w-100 mb-3">età del passegero</label>
+                <select id="eta">
+                    <option value=""></option>
+                    <option value="minore">0-17</option>
+                    <option value="standard">18-65</option>
+                    <option value="over">65 +</option>
+                </select>
+            </div>
+
+
+            <!-- BUTTONS -->
+            <div class="buttons mt-5 col-12 text-center ">
+                <button id="send">Genera</button>
+                <button id="clear">Annulla</button>
+            </div>
         </div>
-
-
-        <!-- DISTANZA -->
-        <div class="input-item">
-            <label for="distanza">chilometri da percorrere</label>
-            <input type="text" id="distanza">
-        </div>
-
-
-        <!-- ETà -->
-        <div class="input-item">
-            <label for="eta">età del passegero</label>
-            <select id="eta">
-                <option value=""></option>
-                <option value="minore">0-17</option>
-                <option value="standard">18-65</option>
-                <option value="over">65 +</option>
-            </select>
-        </div>
-
-
-        <!-- BUTTONS -->
-        <div class="buttons">
-            <button id="send">Genera</button>
-            <button id="clear">Annulla</button>
-        </div>
-
     </section>
 
 
 
      <!-------------RISULTATO------------->
-     <section class="result-section ms_d-none">
-        <h2 id="nome-passeggero">Nome Passegero: </h2>
-        <p id="offerta">offerta</p>
-        <p id="carrozza">carrozza </p>
-        <p id="codice-cp">codice cp</p>
-        <p id="costo-biglietto">costo del biglietto: </p>
+    <section class="result-section d-none container">
+
+        <h3 class="mb-5 text-center">IL TUO BIGLIETTO</h3>
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">DETTAGLIO PASSEGERI</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><h2>Nome Passegero</h2></td>
+                <td><p>Offerta</p></td>
+                <td><p>Carrozza </p></td>
+                <td><p>codice cp</p></td>
+                <td><p>costo del biglietto:</p></td>
+              </tr>
+
+              <tr>
+                <td><h3 id="nome-passeggero"></h3></td>
+                <td><p id="offerta"></p></td>
+                <td><p id="carrozza"></p></td>
+                <td><p id="codice-cp"></p></td>
+                <td><p id="costo-biglietto"></p></td>
+              </tr>
+            </tbody>
+          </table>
     </section>
 
 
