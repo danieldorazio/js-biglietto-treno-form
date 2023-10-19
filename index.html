@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!-- CASTOM STYLE -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!----------------- INPUT ------------------------->
+    <section class="modulo">
+
+        <!-- NOME -->
+        <div class="input-item">
+            <label for="nome">nome</label>
+            <input type="text" id="nome">
+        </div>
+
+
+        <!-- DISTANZA -->
+        <div class="input-item">
+            <label for="distanza">chilometri da percorrere</label>
+            <input type="text" id="distanza">
+        </div>
+
+
+        <!-- ETà -->
+        <div class="input-item">
+            <label for="eta">età del passegero</label>
+            <select id="eta">
+                <option value=""></option>
+                <option value="minore">0-17</option>
+                <option value="standard">18-65</option>
+                <option value="over">65 +</option>
+            </select>
+        </div>
+
+
+        <!-- BUTTONS -->
+        <div class="buttons">
+            <button id="send">Genera</button>
+            <button id="clear">Annulla</button>
+        </div>
+
+    </section>
+
+    
+
+     <!-------------RISULTATO------------->
+     <section class="result-section ms_d-none">
+        <h2>Ciao nome utente</h2>
+        <p>offerta [tipologia di offerta]</p>
+        <p>carrozza [numero random di corrozza]</p>
+        <p>codice cp [nuemro random]</p>
+        <p>costo del biglietto [costodel biglietto]</p>
+    </section>
+
+
+    <!-- SCRIPT JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
